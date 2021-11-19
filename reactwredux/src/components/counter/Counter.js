@@ -14,7 +14,7 @@ const Counter = () => {
   }
 
   const increaseby5 = () => {
-    dispatch({ type: 'increaseby5', value: 5 })
+    dispatch({ type: 'increaseby5', payload: 5 })
   }
 
   const decrement = () => {
