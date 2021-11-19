@@ -1,5 +1,6 @@
 import './Counter.css';
 import { useSelector, useDispatch, connect } from 'react-redux'
+import { counterActions } from '../../store/index';
 import { Component } from 'react';
 
 // Function based version 
@@ -12,23 +13,23 @@ const Counter = () => {
 
 
   const increment = () => {
-    dispatch({ type: 'increment' })
+    dispatch(counterActions.increment())
   }
 
   const increaseby5 = () => {
-    dispatch({ type: 'increaseby5', payload: 5 })
+    dispatch(counterActions.increaseby5(5))
   }
 
   const decreaseby10 = () => {
-    dispatch({ type: 'decreaseby10', payload: 10 })
+    dispatch(counterActions.decreaseby10(10))
   }
 
   const decrement = () => {
-    dispatch({ type: 'decrement' })
+    dispatch(counterActions.decrement())
   }
 
   const toggleCounterHandler = () => {
-    dispatch({ type: 'toggle' })
+    dispatch(counterActions.toggle())
   };
 
   return (
