@@ -3,7 +3,7 @@ import './Header.css';
 import { useSelector } from 'react-redux'
 
 
-import { authActions } from '../../store/index';
+import { authActions } from '../../store/auth-slice';
 import { useDispatch } from 'react-redux'
 
 const Header = () => {
@@ -12,7 +12,7 @@ const Header = () => {
 
   const isauth = useSelector(state => state.auth.isAuthenticated)
 
-  const handleLogout = (e) => {
+  const handleLogout = () => {
     dispatch(authActions.logout())
   }
 

@@ -1,6 +1,6 @@
 import './Counter.css';
 import { useSelector, useDispatch, connect } from 'react-redux'
-import { counterActions } from '../../store/index';
+import { counterActions } from '../../store/counter-slice';
 import { Component } from 'react';
 
 // Function based version 
