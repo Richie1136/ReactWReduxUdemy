@@ -13,7 +13,6 @@ const Header = () => {
   const isauth = useSelector(state => state.auth.isAuthenticated)
 
   const handleLogout = (e) => {
-    e.preventDefault()
     dispatch(authActions.logout())
   }
 
